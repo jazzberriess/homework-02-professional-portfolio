@@ -1,0 +1,170 @@
+:root {
+    --text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,100);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(220,238,248,100);
+line-height: 2rem;
+margin: 0;
+    
+}
+
+header {
+    width: 100%;
+    height: 50%;
+}
+
+/* the hero image */
+.hero-image {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage.jpg");
+    height: 100%;
+    margin: 0;
+
+    /* position and center the image so it scales for all screen sizes */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+/* position the hero tex */
+.hero-text {
+    text-align: left;
+    color: rgba(255,255,255,100);
+    margin-left: 2rem;
+}
+
+/* hero text font styling */
+
+.hero-text h1 {
+    font-size: 3rem;
+    width: 100%;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    
+}
+
+.hero-text p {
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: 200;
+    word-spacing: -0.3rem;
+    text-shadow: var(--text-shadow);
+
+}
+
+nav {
+    float:inline-end;
+    margin: 0.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    
+}
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    display: inline-block;
+    text-align: end;
+    padding-right: 1.5rem;
+
+}
+
+a {
+    color: rgba(255,255,255,100);
+}
+
+a:hover {
+    /* font-size:2rem; */
+    text-shadow: 0.1rem 0.1rem 0.2rem cyan;
+}
+
+/* nav.flex-bounding-box {
+    font-size: 2rem;
+    word-spacing: -0.3rem;
+border: 1px solid orange;
+width: 100%;
+} 
+
+.nav-flex-container {
+    border: 2px solid yellow;
+    list-style-type: none; 
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.nav-flex-items-1, .nav-flex-items-2, .nav-flex-items-3 {
+border: 2px solid hotpink;
+flex: 0.5 1 5%;
+    text-shadow: var(--text-shadow);
+    width: 100%;
+    text-align: end;
+
+} */
+
+
+img {
+    width: 30%;
+    height: auto;
+    border-radius: 5%;
+    display: block;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+main h2 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+section p {
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+#github {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
+#insta {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
+
+#email {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
