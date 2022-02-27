@@ -1,7 +1,11 @@
 :root {
     --text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,100);
     --text-shadow-cyan: 0.1rem 0.1rem 1rem cyan;
+    --text-shadow-white: 0.1rem 0.1rem 0.1rem rgb(255, 255, 255);
+    --text-shadow-dblue: 0.1rem 0.1rem 1rem rgb(20, 37, 189);
     --grey-scale: grayscale(100%);
+    --color: rgb(255, 255, 255);
+    --heroimage: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage.jpg");
 }
 
 *{
@@ -21,12 +25,12 @@ margin: 0;
 
 header {
     width: 100%;
-    height: 50%;
+    height: max-content;
 }
 
 /* the hero image */
 .hero-image {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage.jpg");
+    background-image: var(--heroimage);
     height: 100%;
     margin: 0;
 
@@ -40,7 +44,7 @@ header {
 /* position the hero tex */
 .hero-text {
     text-align: left;
-    color: rgba(255,255,255,100);
+    color: var(--color);
     margin-left: 2rem;
 }
 
@@ -53,6 +57,7 @@ header {
     margin-bottom: 2rem;
     /* make it glow! */
     text-shadow: 0.1rem 0.1rem 1rem cyan, var(--text-shadow);
+    animation: pulse 
     
 }
 
@@ -71,18 +76,19 @@ header {
 
 nav {
     float:inline-end;
-    margin: 0.5rem;
+    padding: 0.5rem;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     
 }
 
-ul {
+ul.navigation {
     list-style: none;
+    text-align: end;
 
 }
 
-li {
+ul.navigation > li {
     display: inline-block;
     text-align: end;
     padding-right: 1.5rem;
@@ -92,7 +98,8 @@ li {
 /* link styling */
 
 a {
-    color: rgba(255,255,255,100);
+    color: var(--color);
+    text-shadow: var(--text-shadow)
 }
 
 /* make the link glow */
@@ -149,7 +156,7 @@ img.profile-pic {
 /* styling and alignment for main body text and headings */
 
 main h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
@@ -157,8 +164,9 @@ main h2 {
 
 section p {
     text-align: justify;
-    /* margin-left: 25%;
-    margin-right: 25%; */
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 1rem;
 }
 
 /* flexbox for the My Work section */
@@ -168,7 +176,8 @@ div.flex-work-containers {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    max-width: 100%;
 }
 div.flex-work-containers img {
     width:100%;
@@ -177,12 +186,15 @@ div.flex-work-containers img {
 div.flex-work-item1 {
     /* just so I can see the edge of the flex items
     border: 5px solid yellow; */
+    max-width: 100%;
     padding: 1rem;
-    flex: 2 0 100;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
     /* making the image greyscale */
     filter: var(--grey-scale);
     /* so we can position the overlaid text */
-    position: relative;
+    /* position: relative; */
 
 }
 
@@ -194,7 +206,7 @@ div.flex-work-item2 {
      /* making the image greyscale */
      filter: var(--grey-scale);
      /* so we can position the overlaid text */
-     position:relative;
+     /* position:relative; */
 }
 
 div.flex-work-item3 {
@@ -220,60 +232,156 @@ div.flex-work-item1:hover, div.flex-work-item2:hover, div.flex-work-item3:hover{
 /* And now we're gonna try give the flex-work-items a text overlay explaining what they are */
 
 p.code-refactor {
-    display:inline;
-    position: absolute;
-    left: 25%;
-    top: 50%;
-    font-size: 5rem;
+    /* position: absolute;
+    width: 100%;
+    top: 50%; */
+    text-align: center; 
+    line-height: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+    text-shadow: var(--text-shadow-white), var(--text-shadow-dblue);
+
+}
+
+/* text overlay on smaller flex-work-items*/
+
+p.landing-page, p.cheat-sheet {
+    /* position: absolute; */
+    text-align: center;
+    line-height: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: var(--text-shadow-white), var(--text-shadow-dblue);
+
 }
 
 p.landing-page {
-
-    display:inline;
-    position: absolute;
-    left: 20%;
     top: 40%;
-    font-size: 3rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+    left: 10%;
 }
 
 p.cheat-sheet {
+    top: 25%;
+}
 
-    display:inline;
-    position: absolute;
-    left: 14%;
-    top: 40%;
-    font-size: 3rem;
+ul.contact > li {
+    /* display: inline-block;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    width: 100%; */
+    /* line-height: 1.5rem; */
 }
 
+/* positioning contact icons and inverting the colour */
 
+ul.contact {
+    list-style-type: none;
+    text-align:center;
+    font-size: 1rem;
+}
 
-/* positioning contact icons */
-
-#github {
+#github, #insta, #email {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    filter:invert();
 }
-#insta {
+/* #insta {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    vertical-align:middle;
+    filter:invert();
 }
 
 #email {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    filter:invert();
+} */
+
+/* .nav-flex {
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+.nav-flex-container {
+    border: 2px solid blueviolet;
+    background-image: var(--heroimage);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
 }
+
+.nav-flex-item1 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 33%;
+    border: 2px solid yellow;
+    max-width: 100%;
+}
+
+.nav-flex-item2 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 33%;
+    border: 2px solid green;
+    max-width:100%;
+}
+
+.nav-flex-item3 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 33%;
+    max-width:100%;
+    border: 2px solid hotpink;
+}
+
+footer {
+    color: var(--color);
+    text-shadow: var(--text-shadow-cyan), var(--text-shadow);
+    background-image: var(--heroimage);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+/* Make the website responsive for smaller screens with a media query */
+
+@media screen and (max-width: 768px){
+    .flex-work-containers{
+        flex-grow: 1;
+        flex-shrink: 0;
+         flex-basis: 50%;
+         max-width: 50%
+    }
+
+} 
+
+@media screen and (max-width: 992px){
+
+    .flex-work-containers{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 33%;
+        max-width: 33%
+    }
+} 
