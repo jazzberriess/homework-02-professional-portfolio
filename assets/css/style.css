@@ -1,5 +1,7 @@
 :root {
-    --text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,100);
+    --text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,100);
+    --text-shadow-cyan: 0.1rem 0.1rem 1rem cyan;
+    --grey-scale: grayscale(100%);
 }
 
 *{
@@ -49,7 +51,8 @@ header {
     width: 100%;
     padding-top: 4rem;
     margin-bottom: 2rem;
-    text-shadow: var(--text-shadow);
+    /* make it glow! */
+    text-shadow: 0.1rem 0.1rem 1rem cyan, var(--text-shadow);
     
 }
 
@@ -59,9 +62,12 @@ header {
     line-height: 3.5rem;
     font-weight: 200;
     word-spacing: -0.3rem;
-    text-shadow: var(--text-shadow);
+    /* make it glow! */
+    text-shadow: 0.1rem 0.1rem 0.5rem rgb(6, 218, 165), var(--text-shadow);
 
 }
+
+/* Navigation menu */
 
 nav {
     float:inline-end;
@@ -83,14 +89,19 @@ li {
 
 }
 
+/* link styling */
+
 a {
     color: rgba(255,255,255,100);
 }
 
+/* make the link glow */
 a:hover {
-    /* font-size:2rem; */
-    text-shadow: 0.1rem 0.1rem 0.2rem cyan;
-}
+    text-shadow: 0px 0px 8px
+    rgb(17, 238, 219), 0 0 15px
+    rgb(124, 137, 253);
+    }
+
 
 /* nav.flex-bounding-box {
     font-size: 2rem;
@@ -123,7 +134,7 @@ flex: 0.5 1 5%;
 } */
 
 
-img {
+img.profile-pic {
     width: 30%;
     height: auto;
     border-radius: 5%;
@@ -135,6 +146,8 @@ img {
     
 }
 
+/* styling and alignment for main body text and headings */
+
 main h2 {
     font-size: 2rem;
     padding-top: 2rem;
@@ -144,10 +157,106 @@ main h2 {
 
 section p {
     text-align: justify;
-    margin-left: 25%;
-    margin-right: 25%;
+    /* margin-left: 25%;
+    margin-right: 25%; */
 }
 
+/* flexbox for the My Work section */
+
+div.flex-work-containers {
+    border: 5px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.flex-work-containers img {
+    width:100%;
+}
+
+div.flex-work-item1 {
+    /* just so I can see the edge of the flex items
+    border: 5px solid yellow; */
+    padding: 1rem;
+    flex: 2 0 100;
+    /* making the image greyscale */
+    filter: var(--grey-scale);
+    /* so we can position the overlaid text */
+    position: relative;
+
+}
+
+div.flex-work-item2 {
+    /* just so I can see the edge of the flex items border: 5px solid green; */
+    max-width: 100%;
+    padding: 1rem;
+    flex: 1 0 0;
+     /* making the image greyscale */
+     filter: var(--grey-scale);
+     /* so we can position the overlaid text */
+     position:relative;
+}
+
+div.flex-work-item3 {
+    /* just so I can see the edge of the flex items
+    border: 5px solid hotpink; */
+    padding: 1rem;
+    max-width: 100%;
+    flex: 1 0 0;
+     /* making the image greyscale */
+     filter: var(--grey-scale);
+     /* so we can position the overlaid text */
+     position: relative;
+}
+
+/* Lets try to make the flex images fade in to colour on hover */
+
+div.flex-work-item1:hover, div.flex-work-item2:hover, div.flex-work-item3:hover{
+    filter:none;
+    transition: all 3s 0.5s;
+}
+
+
+/* And now we're gonna try give the flex-work-items a text overlay explaining what they are */
+
+p.code-refactor {
+    display:inline;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    font-size: 5rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+}
+
+p.landing-page {
+
+    display:inline;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+}
+
+p.cheat-sheet {
+
+    display:inline;
+    position: absolute;
+    left: 14%;
+    top: 40%;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-shadow: var(--text-shadow), var(--text-shadow-cyan);
+}
+
+
+
+/* positioning contact icons */
 
 #github {
     display: inline-block;
