@@ -28,6 +28,15 @@ header {
     height: max-content;
 }
 
+hr {
+    border: none;
+    margin: 3rem;
+    align: center;
+    border: 0;
+    height: 0.2rem;
+    background-image: linear-gradient(to right,rgba(0,0,0,0), rgba(1, 11, 102, 0.75), rgba(0,0,0,0))
+}
+
 /* the hero image */
 .hero-image {
     background-image: var(--heroimage);
@@ -70,7 +79,7 @@ header {
     font-weight: 200;
     word-spacing: -0.3rem;
     /* make it glow! */
-    text-shadow: 0.1rem 0.1rem 0.5rem rgb(6, 218, 165), var(--text-shadow);
+    text-shadow: 0rem 0rem 0.5rem black, 0rem 0rem 1rem rgb(247,62,133);
 
 }
 
@@ -101,16 +110,32 @@ ul.navigation {
 
 a {
     color: var(--color);
-    text-shadow: var(--text-shadow)
+    text-shadow: var(--text-shadow);
+    display: block;
 }
 
-/* make the link glow */
+/* make the links glow */
 a:hover {
     text-shadow: 0px 0px 8px
     rgb(17, 238, 219), 0 0 15px
     rgb(124, 137, 253);
-    }
 
+    }
+    
+
+.contact-icon:hover {
+    box-shadow: 0rem 0rem 2rem rgb(238, 17,36);
+    border-bottom: 1px solid white;
+   
+}
+
+a:focus {
+    /* outline: 0.3rem double rgb(17, 238, 219); */
+    box-shadow: 0rem 0rem 2rem rgb(247, 62, 133);
+    padding: 0.3rem;
+    
+    }
+    
 
 /* nav.flex-bounding-box {
     font-size: 2rem;
@@ -260,6 +285,7 @@ main h2 {
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
+    text-shadow: var(--text-shadow-white),0rem 0rem 1rem rgb(247,62,133);
 }
 
 section p {
@@ -300,7 +326,7 @@ div.flex-work-item1 {
     /* padding: 1rem; */
     flex: 2 0 100%;
     /* making the image greyscale */
-    filter: var(--grey-scale);
+    /* filter: var(--grey-scale); */
     /* so we can position the overlaid text */
     /* position: relative; */
 
@@ -312,29 +338,18 @@ div.flex-work-item2 {
     padding: 1rem;
     flex: 1 0 0;
      /* making the image greyscale */
-     filter: var(--grey-scale);
+     /* filter: var(--grey-scale); */
      /* so we can position the overlaid text */
      /* position:relative; */
 }
 
-div.flex-work-item3 {
-    /* just so I can see the edge of the flex items
-    border: 5px solid hotpink; */
-    padding: 1rem;
-    max-width: 100%;
-    flex: 1 0 0;
-     /* making the image greyscale */
-     filter: var(--grey-scale);
-     /* so we can position the overlaid text */
-     /* position: relative; */
-}
 
-/* Lets try to make the flex images fade in to colour on hover */
+/* Lets try to make the flex images fade in to colour on hover and focus */
 
-div.flex-work-item1:hover, div.flex-work-item2:hover, div.flex-work-item3:hover{
+/* div.flex-work-item1:hover, div.flex-work-item2:hover {
     filter:none;
     transition: all 3s 0.5s;
-}
+} */
 
 
 /* Headings for the flex-work-items explaining what they are */
@@ -392,7 +407,7 @@ ul.contact {
     font-size: 1rem;
 }
 
-#github, #insta, #email {
+.contact-icon {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -473,6 +488,13 @@ footer h3 {
 }
 
 /* Make the website responsive for smaller screens with a media query */
+
+@media (hover:hover) {
+
+    div.flex-work-item1, div.flex-work-item2, div.flex-work-item3 {
+        filter: none;
+    }
+}
 
 @media screen and (max-width: 768px){
     .flex-work-containers{
