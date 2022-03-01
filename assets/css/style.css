@@ -125,8 +125,12 @@ a:hover {
 
 .contact-icon:hover {
     box-shadow: 0rem 0rem 2rem rgb(238, 17,36);
-    border-bottom: 1px solid white;
    
+}
+
+.contact-icon {
+    border-bottom: 0.07rem solid black;
+    padding-bottom: 0.2rem;
 }
 
 a:focus {
@@ -192,7 +196,8 @@ div.about-me-flex-item2 {
 } */
 
 .nav-flex-container-contact {
-    border: 2px solid blueviolet;
+    /* Just so I can see the borders of the container
+    border: 2px solid blueviolet; */
     background-image: var(--heroimage);
     display: flex;
     flex-direction: row;
@@ -200,37 +205,44 @@ div.about-me-flex-item2 {
     align-items: center;
     justify-content:flex-end;
     white-space: nowrap;
+    /* padding-right: 1rem; */
 }
 
+/* Actually do I need these three to have separate classes?! */
+
 .nav-flex-contact-item1 {
+    /* Just so I can see the borders of the container
+    border: 2px solid yellow; */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 10%;
-    border: 2px solid yellow;
     max-width: 100%;
     padding-right: 1rem;
 }
 
-.nav-flex-contact-item2 {
+/* .nav-flex-contact-item2 {
+    Just so I can see the borders of the container
+    border: 2px solid green;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 10%;
-    border: 2px solid green;
     max-width:100%;
     padding-right:1rem;
 }
 
 .nav-flex-contact-item3 {
+    Just so I can see the borders of the container
+    border: 2px solid hotpink;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 10%;
     max-width:100%;
-    border: 2px solid hotpink;
     padding-right: 1rem;
-}
+} */
 
 div.major-flex-box-about1 {
-border: 3px dashed blue;
+    /* Just so I can see the borders of the container
+border: 3px dashed blue; */
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -257,7 +269,8 @@ img.profile-pic {
 }
 
 div.major-flex-box-about2 {
-    border: 3px dashed greenyellow;
+    /* Just so I can see the borders of the container
+    border: 3px dashed greenyellow; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -270,7 +283,8 @@ div.major-flex-box-about2 {
 }
 
 div.about-me-flex {
-    border: 3px dashed cyan;
+    /* Just so I can see the borders of the container
+    border: 3px dashed cyan; */
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 10%;
@@ -298,7 +312,8 @@ section p {
 /* flexbox for the My Work section */
 
 div.flex-work-containers {
-    border: 5px solid red;
+    /* Just so I can see the borders of the container
+    border: 5px solid red; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -405,6 +420,7 @@ ul.contact {
     list-style-type: none;
     text-align:center;
     font-size: 1rem;
+    padding-top: 0.5rem;
 }
 
 .contact-icon {
@@ -442,7 +458,8 @@ ul.contact {
 } */
 
 .nav-flex-container {
-    border: 2px solid blueviolet;
+    /* Just so I can see the borders of the container
+    border: 2px solid blueviolet; */
     background-image: var(--heroimage);
     display: flex;
     flex-direction: row;
@@ -452,28 +469,32 @@ ul.contact {
 }
 
 .nav-flex-item1 {
+    /* Just so I can see the borders of the container
+    border: 2px solid yellow; */
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 33%;
-    border: 2px solid yellow;
     max-width: 100%;
 }
 
-.nav-flex-item2 {
+/* .nav-flex-item2 {
+    Just so I can see the borders of the container
+    border: 2px solid yellow;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 33%;
-    border: 2px solid green;
     max-width:100%;
 }
 
 .nav-flex-item3 {
+    Just so I can see the borders of the container
+    border: 2px solid hotpink;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 33%;
     max-width:100%;
-    border: 2px solid hotpink;
-}
+  
+} */
 
 footer {
     color: var(--color);
@@ -489,12 +510,6 @@ footer h3 {
 
 /* Make the website responsive for smaller screens with a media query */
 
-@media (hover:hover) {
-
-    div.flex-work-item1, div.flex-work-item2, div.flex-work-item3 {
-        filter: none;
-    }
-}
 
 @media screen and (max-width: 768px){
     .flex-work-containers{
