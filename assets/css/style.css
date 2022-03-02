@@ -356,8 +356,7 @@ footer h3 {
 @media screen and (max-width: 768px){
 
     .hero-image {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage2.jpg");
-
+        background-image: var(--heroimage)!important;
         height: 100%;
         padding-bottom: 1rem;
         margin: 0;
@@ -366,7 +365,7 @@ footer h3 {
         background-position: center;
         background-repeat: no-repeat;
         background-size:cover;
-
+    
     }
     .flex-work-containers{
         flex-grow: 1;
@@ -379,8 +378,8 @@ footer h3 {
 
 @media screen and (max-width: 992px){
 
-    hero-image {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage2.jpg");
+    .hero-image {
+        background-image: var(--heroimage)!important;
 
         height: 100%;
         padding-bottom: 1rem;
