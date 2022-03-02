@@ -18,8 +18,7 @@ html, body {
     width: 100%;
     font-family:'Courier New', Courier, monospace;
     background-color: rgba(220,238,248,100);
-line-height: 2rem;
-margin: 0;
+    line-height: 2rem;
     
 }
 
@@ -28,6 +27,8 @@ header {
     height: max-content;
 }
 
+/* horizontal rule styling so it looks pretty */
+
 hr {
     border: none;
     margin: 3rem;
@@ -35,6 +36,23 @@ hr {
     border: 0;
     height: 0.2rem;
     background-image: linear-gradient(to right,rgba(0,0,0,0), rgba(1, 11, 102, 0.75), rgba(0,0,0,0))
+}
+
+/* styling and positioning for main body text and headings */
+
+main h2 {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-shadow: var(--text-shadow-white),0rem 0rem 1rem rgb(247,62,133);
+}
+
+section p {
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 1rem;
 }
 
 /* the hero image */
@@ -56,7 +74,7 @@ hr {
     text-align: left;
     color: var(--color);
     margin-left: 2rem;
-    /* width: 100%; */
+    
 }
 
 /* hero text font styling */
@@ -67,6 +85,7 @@ hr {
     width: 100%;
     padding-top: 2rem;
     margin-bottom: 2rem;
+
     /* make it glow! */
     text-shadow: 0.1rem 0.1rem 1rem cyan, var(--text-shadow);
     
@@ -78,6 +97,7 @@ hr {
     line-height: 3.5rem;
     font-weight: 200;
     word-spacing: -0.3rem;
+
     /* make it glow! */
     text-shadow: 0rem 0rem 0.5rem black, 0rem 0rem 1rem rgb(247,62,133);
 
@@ -86,25 +106,16 @@ hr {
 /* Navigation menu */
 
 nav {
-    /* float:inline-end; */
     padding: 0.5rem;
     font-weight: 500;
     font-size: 1.4rem;
-    
+
 }
 
 ul.navigation {
     list-style: none;
     text-align: end;
-
 }
-
-/* ul.navigation > li {
-    display: inline-block;
-    text-align: end;
-    padding-right: 1.5rem;
-
-} */
 
 /* link styling */
 
@@ -114,19 +125,21 @@ a {
     display: block;
 }
 
-/* make the links glow */
+/* make the links and linked icons glow on hover */
+
 a:hover {
     text-shadow: 0px 0px 8px
     rgb(17, 238, 219), 0 0 15px
     rgb(124, 137, 253);
 
-    }
+ }
     
-
 .contact-icon:hover {
     box-shadow: 0rem 0rem 2rem rgb(238, 17,36);
    
 }
+
+/* styling links for accessibility by adding underlines on the icons and focus for all anchors */
 
 .contact-icon {
     border-bottom: 0.07rem solid black;
@@ -134,71 +147,16 @@ a:hover {
 }
 
 a:focus {
-    /* outline: 0.3rem double rgb(17, 238, 219); */
     box-shadow: 0rem 0rem 2rem rgb(247, 62, 133);
     padding: 0.3rem;
     
-    }
-    
+}
 
-/* nav.flex-bounding-box {
-    font-size: 2rem;
-    word-spacing: -0.3rem;
-border: 1px solid orange;
-width: 100%;
-} 
+/* top navigation menu */
 
 .nav-flex-container {
-    border: 2px solid yellow;
-    list-style-type: none; 
-    min-width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    justify-content: stretch;
-    align-items: center;
-}
-
-.nav-flex-items-1, .nav-flex-items-2, .nav-flex-items-3 {
-border: 2px solid hotpink;
-flex: 0.5 1 5%;
-    text-shadow: var(--text-shadow);
-    width: 100%;
-    text-align: end;
-
-} */
-/* div.about-me-flex {
-    border: 2px solid greenyellow;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap:wrap;
-    align-items: stretch;
-    justify-content: center;
-}
-
-div.about-me-flex-item1 {
-    border: 2px solid orange;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0%;
-    max-width: 100%;
-}
-
-div.about-me-flex-item2 {
-    border: 2px solid red;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0%;
-    max-width: 100%;
-} */
-
-.nav-flex-container-contact {
     /* Just so I can see the borders of the container
     border: 2px solid blueviolet; */
-    background-image: var(--heroimage);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -208,11 +166,9 @@ div.about-me-flex-item2 {
     /* padding-right: 1rem; */
 }
 
-/* Actually do I need these three to have separate classes?! */
-
-.nav-flex-contact-item1 {
-    /* Just so I can see the borders of the container
-    border: 2px solid yellow; */
+.nav-flex-item1 {
+    /* Just so I can see the borders of the container */
+    /* border: 2px solid yellow; */
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 10%;
@@ -220,57 +176,26 @@ div.about-me-flex-item2 {
     padding-right: 1rem;
 }
 
-/* .nav-flex-contact-item2 {
-    Just so I can see the borders of the container
-    border: 2px solid green;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 10%;
-    max-width:100%;
-    padding-right:1rem;
-}
-
-.nav-flex-contact-item3 {
-    Just so I can see the borders of the container
-    border: 2px solid hotpink;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 10%;
-    max-width:100%;
-    padding-right: 1rem;
-} */
+/* styling and positioning for About Me flexbox */
 
 div.major-flex-box-about1 {
-    /* Just so I can see the borders of the container
-border: 3px dashed blue; */
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-flex-basis: 100%;
-align-content: center;
-justify-content: center;
-border: 3px solid cyan;
-height: 100%;
-width: 100%;
-
-}
-
-img.profile-pic {
-    width: 23rem;
-    height: auto;
-    border-radius: 5%;
+    /* Just so I can see the borders of the container */
+    /* border: 2px solid blue; */
     display: flex;
-    /* min-width: 50%; */
-    /* margin-top: 3rem;
-    margin-left: auto;
-    margin-right: auto; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 2rem;
 
-    
 }
 
 div.major-flex-box-about2 {
-    /* Just so I can see the borders of the container
-    border: 3px dashed greenyellow; */
+    /* Just so I can see the borders of the container */
+    /* border: 3px dashed greenyellow; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -282,34 +207,26 @@ div.major-flex-box-about2 {
  
 }
 
+img.profile-pic {
+    /* Just so I can see the borders of the container
+    border: 2px solid yellow; */
+    width: 23rem;
+    height: auto;
+    border-radius: 5%;
+    display: flex;
+
+}
+
 div.about-me-flex {
     /* Just so I can see the borders of the container
     border: 3px dashed cyan; */
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 10%;
-    /* max-width: 100%; */
  
 }
 
-/* styling and alignment for main body text and headings */
-
-main h2 {
-    font-size: 2.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
-    text-shadow: var(--text-shadow-white),0rem 0rem 1rem rgb(247,62,133);
-}
-
-section p {
-    text-align: justify;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding-bottom: 1rem;
-}
-
-/* flexbox for the My Work section */
+/* styling and positioning of flexbox for the My Work section */
 
 div.flex-work-containers {
     /* Just so I can see the borders of the container
@@ -325,25 +242,11 @@ div.flex-work-containers img {
     width:100%;
 }
 
-/* div.flex-work-about {
-    border: 2px solid cyan;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0;
-    max-width: 100%;
-
-} */
-
 div.flex-work-item1 {
     /* just so I can see the edge of the flex items
     border: 5px solid yellow; */
     max-width: 100%;
-    /* padding: 1rem; */
     flex: 2 0 100%;
-    /* making the image greyscale */
-    /* filter: var(--grey-scale); */
-    /* so we can position the overlaid text */
-    /* position: relative; */
 
 }
 
@@ -351,28 +254,13 @@ div.flex-work-item2 {
     /* just so I can see the edge of the flex items border: 5px solid green; */
     max-width: 100%;
     padding: 1rem;
-    flex: 1 0 0;
-     /* making the image greyscale */
-     /* filter: var(--grey-scale); */
-     /* so we can position the overlaid text */
-     /* position:relative; */
+    flex: 1 0 50%;
+
 }
 
-
-/* Lets try to make the flex images fade in to colour on hover and focus */
-
-/* div.flex-work-item1:hover, div.flex-work-item2:hover {
-    filter:none;
-    transition: all 3s 0.5s;
-} */
-
-
-/* Headings for the flex-work-items explaining what they are */
+/* Heading for the code refactor work */
 
 p.code-refactor {
-    /* position: absolute;
-    width: 100%;
-    top: 50%; */
     text-align: center; 
     line-height: 2.5rem;
     font-size: 3rem;
@@ -383,8 +271,7 @@ p.code-refactor {
 
 /* Headings on smaller flex-work-items*/
 
-p.landing-page, p.cheat-sheet {
-    /* position: absolute; */
+p.other-projects {
     text-align: center;
     line-height: 3rem;
     font-size: 2rem;
@@ -393,33 +280,14 @@ p.landing-page, p.cheat-sheet {
 
 }
 
-/* p.landing-page {
-    top: 40%;
-    left: 10%;
-}
 
-p.cheat-sheet {
-    top: 25%;
-} */
-
-/* ul.contact > li {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    margin-left: 10rem;
-    width: 100%; */
-    /* line-height: 1.5rem;
-} */
-
-/* positioning contact icons and inverting the colour */
+/* positioning contact icons and inverting the colour because the original files were black*/
 
 ul.contact {
     list-style-type: none;
     text-align:center;
     font-size: 1rem;
+    margin-top: 1rem;
     padding-top: 0.5rem;
 }
 
@@ -431,33 +299,10 @@ ul.contact {
     vertical-align: middle;
     filter:invert();
 }
-/* #insta {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin-right: 0.5rem;
-    vertical-align:middle;
-    filter:invert();
-}
 
-#email {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-    filter:invert();
-} */
+/* flexbox for contact icons */
 
-/* .nav-flex {
-    border: 2px solid orange;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
-.nav-flex-container {
+.nav-flex-container-contact {
     /* Just so I can see the borders of the container
     border: 2px solid blueviolet; */
     background-image: var(--heroimage);
@@ -468,7 +313,7 @@ ul.contact {
     justify-content:center;
 }
 
-.nav-flex-item1 {
+.nav-flex-contact-item1 {
     /* Just so I can see the borders of the container
     border: 2px solid yellow; */
     flex-grow: 1;
@@ -476,25 +321,6 @@ ul.contact {
     flex-basis: 33%;
     max-width: 100%;
 }
-
-/* .nav-flex-item2 {
-    Just so I can see the borders of the container
-    border: 2px solid yellow;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 33%;
-    max-width:100%;
-}
-
-.nav-flex-item3 {
-    Just so I can see the borders of the container
-    border: 2px solid hotpink;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 33%;
-    max-width:100%;
-  
-} */
 
 footer {
     color: var(--color);
@@ -530,8 +356,9 @@ footer h3 {
         max-width: 33%
     }
 
+    /* Making the headings for the My Work flex box smaller on smaller screens */
+
     p.code-refactor {
-   
         text-align: center; 
         line-height: 2rem;
         font-size: 2rem;
@@ -541,7 +368,6 @@ footer h3 {
     }
 
     p.landing-page, p.cheat-sheet {
-        /* position: absolute; */
         text-align: center;
         line-height: 2rem;
         font-size: 1rem;
