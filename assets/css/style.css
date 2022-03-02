@@ -58,7 +58,7 @@ section p {
 /* the hero image */
 .hero-image {
     background-image: var(--heroimage);
-    height: 45vh;
+    height: 100%;
     padding-bottom: 1rem;
     margin: 0;
 
@@ -354,6 +354,20 @@ footer h3 {
 
 
 @media screen and (max-width: 768px){
+
+    .hero-image {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage2.jpg");
+
+        height: 100%;
+        padding-bottom: 1rem;
+        margin: 0;
+    
+        /* position and center the image so it scales for all screen sizes */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+
+    }
     .flex-work-containers{
         flex-grow: 1;
         flex-shrink: 0;
@@ -364,6 +378,20 @@ footer h3 {
 } 
 
 @media screen and (max-width: 992px){
+
+    hero-image {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage2.jpg");
+
+        height: 100%;
+        padding-bottom: 1rem;
+        margin: 0;
+    
+        /* position and center the image so it scales for all screen sizes */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+
+    }
 
     .flex-work-containers{
         flex-grow: 1;
