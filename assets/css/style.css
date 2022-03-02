@@ -364,7 +364,7 @@ footer h3 {
         /* position and center the image so it scales for all screen sizes */
         background-position: center;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size:100% 100%;
     
     }
     .flex-work-containers{
@@ -388,7 +388,7 @@ footer h3 {
         /* position and center the image so it scales for all screen sizes */
         background-position: center;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: 100% 100%;
 
     }
 
