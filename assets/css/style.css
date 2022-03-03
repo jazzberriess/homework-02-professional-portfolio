@@ -120,19 +120,12 @@ ul.navigation {
     text-align: end;
 }
 
-li.li-border {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-   
-}
-
 /* link styling */
 
 a {
     color: var(--color);
     text-shadow: var(--text-shadow);
     display: block;
-    text-decoration: none;
 }
 
 /* make the links and linked icons glow on hover */
@@ -479,13 +472,7 @@ footer h3 {
     /* Also for some reason mob devices weren't loading the var(--heroimagenogradient) properly so...I've just individually set the bg image */
     .hero-image {
         background-image: url(/assets/images/heroimage.jpg);
-        height: 100%;
-        padding-bottom: 1rem;
-        margin: 0%;
 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     
     }
 
@@ -493,12 +480,6 @@ footer h3 {
 
     .hero-text p {
 
-        width: 100%;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    font-weight: 200;
-    word-spacing: -0.3rem;
-    
         /* make it glow! */
         text-shadow: 0rem 0rem 0.5rem white, 0rem 0rem 1rem rgb(247, 62, 133);
         
@@ -533,13 +514,7 @@ footer h3 {
 
     .hero-image {
         background-image: url(../images/heroimage.jpg);
-        height: 100%;
-        padding-bottom: 1rem;
-        margin: 0%;
-
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+ 
 
     }
 
@@ -547,12 +522,6 @@ footer h3 {
     /* Adding this here because the linear gradient doesn't display properly on some mobile devices so the text needs to be changed slighly to increase readability */
 
     .hero-text p {
-
-        width: 100%;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    font-weight: 200;
-    word-spacing: -0.3rem;
 
         /* make it glow! */
         text-shadow: 0rem 0rem 0.5rem white, 0rem 0rem 1rem rgb(247, 62, 133);
@@ -590,11 +559,7 @@ footer h3 {
 
     .nav-flex-container-contact {
         background-image: url(../images/heroimage.jpg);
-        display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:center;
+
     }
 
       /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
