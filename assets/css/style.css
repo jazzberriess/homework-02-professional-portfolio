@@ -5,7 +5,6 @@
     --text-shadow-dblue: 0.1rem 0.1rem 1rem rgb(20, 37, 189);
     --grey-scale: grayscale(100%);
     --color: rgb(255, 255, 255);
-    --heroimage: linear-gradient(rgba(255, 255, 255, 0.123), rgba(255, 255, 255, 0.123)), url("../images/heroimage.jpg");
     --heroimage-nogradient: url("../images/heroimage.jpg");
     --box-shadow-focus: 0rem 0rem 1rem rgb(247, 62, 133);
     --contact-box-shadow-cyan: 0rem 0rem 0.3rem cyan;
@@ -61,7 +60,7 @@ section p {
 
 /* the hero image */
 .hero-image {
-    background-image: var(--heroimage);
+    background-image: var(--heroimage-nogradient);
     height: 100%;
     padding-bottom: 1rem;
     margin: 0;
@@ -439,7 +438,7 @@ ul.contact {
 .nav-flex-container-contact {
     /* Just so I can see the borders of the container
     border: 2px solid blueviolet; */
-    background-image: var(--heroimage);
+    background-image: var(--heroimage-nogradient);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -459,7 +458,7 @@ ul.contact {
 footer {
     color: var(--color);
     text-shadow: var(--text-shadow-cyan), var(--text-shadow);
-    background-image: var(--heroimage);
+    background-image: var(--heroimage-nogradient);
     text-align: center;
     padding: 2rem;
 }
@@ -474,9 +473,9 @@ footer h3 {
 @media screen and (max-width: 768px){
 
     /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
+    /* Also for some reason mob devices weren't loading the var(--heroimagenogradient) properly so...I've just individually set the bg image */
     .hero-image {
-        /* background-image: url(/assets/images/heroimage.jpg); */
-background-color: rgb(8,12,51);
+        background-image: url(/assets/images/heroimage.jpg);
         height: 100%;
         padding-bottom: 1rem;
         margin: 0%;
@@ -531,7 +530,6 @@ background-color: rgb(8,12,51);
 
     .hero-image {
         background-image: url(../images/heroimage.jpg);
-        /* background-color: rgb(8,12,51); */
         height: 100%;
         padding-bottom: 1rem;
         margin: 0%;
