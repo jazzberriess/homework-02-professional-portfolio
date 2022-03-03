@@ -11,6 +11,8 @@ View deployed application on [GitHub Pages](https://jazzberriess.github.io/homew
 
 Built using HTML and CSS
 
+![Final design demo](./assets/images/professional-porfolio.gif)
+
 ## Wireframe
 ![Image of Wireframe](/assets/images/wireframe.png)
 
@@ -20,6 +22,8 @@ The following websites were invaluable in my quest for knowledge and troubleshoo
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 * [W3 Schools](https://www.w3schools.com/)
 * [Stack Overflow](https://stackoverflow.com/)
-* [CSS Tricks](https://css-tricks.com/)
+* [CSS Tricks's Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Log Rocket's Form Styling tutorial](https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/)
 * AskBCS via Slack
 * Class notes and recordings from Week 2
+* Class office hours

@@ -475,13 +475,27 @@ footer h3 {
 
     /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
     .hero-image {
-        background-image: var(--heroimage-nogradient);
+        background-image: url(/assets/images/heroimage.jpg);
+
+        height: 100%;
+        padding-bottom: 1rem;
+        margin: 0%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     
     }
 
     /* Adding this here because the linear gradient doesn't display properly on some mobile devices so the text needs to be changed slighly to increase readability */
 
     .hero-text p {
+
+        width: 100%;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: 200;
+    word-spacing: -0.3rem;
     
         /* make it glow! */
         text-shadow: 0rem 0rem 0.5rem white, 0rem 0rem 1rem rgb(247, 62, 133);
@@ -498,14 +512,14 @@ footer h3 {
       /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     .nav-flex-container-contact {
-        background-image: var(--heroimage-nogradient);
+        background-image: url(/assets/images/heroimage.jpg)
    
     }
 
       /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     footer {
-        background-image: var(--heroimage-nogradient);
+        background-image: url(/assets/images/heroimage.jpg);
    
     }
 
@@ -516,7 +530,15 @@ footer h3 {
      /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     .hero-image {
-        background-image: var(--heroimage-nogradient);
+        /* background-image: url(../images/heroimage.jpg); */
+        background-color: rgb(8,12,51);
+        height: 100%;
+        padding-bottom: 1rem;
+        margin: 0%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
     }
 
@@ -524,6 +546,12 @@ footer h3 {
     /* Adding this here because the linear gradient doesn't display properly on some mobile devices so the text needs to be changed slighly to increase readability */
 
     .hero-text p {
+
+        width: 100%;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: 200;
+    word-spacing: -0.3rem;
 
         /* make it glow! */
         text-shadow: 0rem 0rem 0.5rem white, 0rem 0rem 1rem rgb(247, 62, 133);
@@ -560,13 +588,18 @@ footer h3 {
       /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     .nav-flex-container-contact {
-        background-image: var(--heroimage-nogradient);
+        background-image: url(../images/heroimage.jpg);
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
     }
 
       /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     footer {
-        background-image: var(--heroimage-nogradient);
+        background-image: url(../images/heroimage.jpg);
 
     }
 } 
