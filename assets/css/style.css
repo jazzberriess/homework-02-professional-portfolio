@@ -5,7 +5,6 @@
     --text-shadow-dblue: 0.1rem 0.1rem 1rem rgb(20, 37, 189);
     --grey-scale: grayscale(100%);
     --color: rgb(255, 255, 255);
-    --heroimage-nogradient: url("../images/heroimage.jpg");
     --box-shadow-focus: 0rem 0rem 1rem rgb(247, 62, 133);
     --contact-box-shadow-cyan: 0rem 0rem 0.3rem cyan;
     --contact-box-shadow-dblue: 0rem 0rem 1rem rgb(20, 37, 189);
@@ -60,7 +59,7 @@ section p {
 
 /* the hero image */
 .hero-image {
-    background-image: var(--heroimage-nogradient);
+    background-image: url(../images/heroimage.jpg);
     height: 100%;
     padding-bottom: 1rem;
     margin: 0;
@@ -408,7 +407,7 @@ div.contact-flex-item1 {
 button:hover {
     box-shadow: var(--contact-box-shadow-cyan);
     cursor:pointer;
-    background-image: var(--heroimage-nogradient);
+    background-image: url(../images/heroimage.jpg);
     color: var(--color);
     text-shadow: var(--text-shadow);
 }
@@ -438,7 +437,7 @@ ul.contact {
 .nav-flex-container-contact {
     /* Just so I can see the borders of the container
     border: 2px solid blueviolet; */
-    background-image: var(--heroimage-nogradient);
+    background-image: url(../images/heroimage.jpg);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -458,7 +457,7 @@ ul.contact {
 footer {
     color: var(--color);
     text-shadow: var(--text-shadow-cyan), var(--text-shadow);
-    background-image: var(--heroimage-nogradient);
+    background-image: url(../images/heroimage.jpg);
     text-align: center;
     padding: 2rem;
 }
@@ -524,7 +523,7 @@ footer h3 {
 
 } 
 
-@media screen and (max-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 992px) {
 
      /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
