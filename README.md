@@ -6,6 +6,9 @@ The project was mainly focused on building skills in advanced CSS skills, such a
 
 I learned how flexbox is useful in creating column or grid layouts and how it is beneficial to use in making pages more responsive. I also learned that it is important to keep in mind that webpages are viewed across a variety of screen sizes and devices. 
 
+Flex box was a challenging aspect for me during the building of this website, but I feel that after this assignment I have a better understanding and grasp on how it works. 
+I would say though, that the most challenging part of this assignment was trying to make sure that the website was responsive and functional across multiple devices. I had instances where images would work on desktop, but not in landscape on a tablet! There was much trial and error for getting things to work across multiple devices. Although I think I have managed well for this assignment, there's much more for me to learn about compatibility across devices and browsers. 
+
 ## Usage
 View deployed application on [GitHub Pages](https://jazzberriess.github.io/homework-02-professional-portfolio/)
 
