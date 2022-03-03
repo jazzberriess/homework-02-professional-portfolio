@@ -120,12 +120,19 @@ ul.navigation {
     text-align: end;
 }
 
+li.li-border {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+   
+}
+
 /* link styling */
 
 a {
     color: var(--color);
     text-shadow: var(--text-shadow);
     display: block;
+    text-decoration: none;
 }
 
 /* make the links and linked icons glow on hover */
@@ -295,7 +302,6 @@ section.contact-flex-box {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     max-width: 100%;
     padding: 1rem;
 
@@ -308,7 +314,6 @@ div.contact-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     max-width: 100%;
     padding: 1rem;
     flex: 1 0 50%;
@@ -321,7 +326,6 @@ div.contact-form-container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     max-width: 100%;
     padding: 1rem;
     flex: 1 0 50%;
