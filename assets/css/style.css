@@ -475,8 +475,8 @@ footer h3 {
 
     /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
     .hero-image {
-        background-image: url(/assets/images/heroimage.jpg);
-
+        /* background-image: url(/assets/images/heroimage.jpg); */
+background-color: rgb(8,12,51);
         height: 100%;
         padding-bottom: 1rem;
         margin: 0%;
@@ -530,8 +530,8 @@ footer h3 {
      /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
     .hero-image {
-        /* background-image: url(../images/heroimage.jpg); */
-        background-color: rgb(8,12,51);
+        background-image: url(../images/heroimage.jpg);
+        /* background-color: rgb(8,12,51); */
         height: 100%;
         padding-bottom: 1rem;
         margin: 0%;
