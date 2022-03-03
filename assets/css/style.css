@@ -524,7 +524,7 @@ footer h3 {
 
 } 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
 
      /* Removing the linear gradient from the hero image because apparently some mobiles don't like them over images*/
 
